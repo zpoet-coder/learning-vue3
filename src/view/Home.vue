@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Home from './view/Home.vue'
+import HelloWorld from '../components/HelloWorld.vue'
 import { useRouter, useRoute } from 'vue-router'
 
 const router = useRouter()
@@ -13,10 +13,17 @@ const routerTest = () => {
 </script>
 
 <template>
-  <div v-if="route.path === '/'">
-    <Home />
+  <div>
+    <a href="https://vite.dev" target="_blank">
+      <img src="/vite.svg" class="logo" alt="Vite logo" />
+    </a>
+    <a href="https://vuejs.org/" target="_blank">
+      <img src="../assets/vue.svg" class="logo vue" alt="Vue logo" />
+    </a>
   </div>
-  <router-view v-else></router-view>
+  <HelloWorld msg="Vite + Vue" />
+  <!-- <router-link to="/routerTest">toRouterTest</router-link> -->
+  <el-button type="primary" @click="routerTest">RouterTest</el-button>
 </template>
 
 <style scoped>
