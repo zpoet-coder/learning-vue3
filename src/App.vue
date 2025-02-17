@@ -6,9 +6,7 @@ const router = useRouter()
 const route = useRoute()
 
 const routerTest = () => {
-  router.push('/RouterTest').then(() => {
-
-  })
+  router.push('/RouterTest')
 }
 </script>
 
